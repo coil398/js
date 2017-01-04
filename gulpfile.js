@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 var browserify = require('browserify');
 var gulp = require('gulp');
@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('browserify', () => {
     browserify('./src/index.jsx', {debug: true})
-    .transform(babelify, {presets: ['es2015']})
+    .transform(babelify, {presets: ['es2015', 'react']})
     .bundle()
     .on('error', errorHandler)
     .pipe(source('script.js'))
