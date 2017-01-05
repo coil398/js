@@ -8,11 +8,34 @@ class CommentBox extends React.Component {
 
   render() {
     return(
-      <div className='commentBox'>
-          Hello World!!
-      </div>
-    );
+        <div className='commentBox'>
+            <h2>Comments</h2>
+            <CommentList />
+            <CommentForm />
+        </div>
+        );
   }
+
+}
+
+class CommentList extends React.Component {
+    render() {
+        return(
+            <div className='commentList'>
+                Hello World
+            </div>
+            );
+    }
+}
+
+class CommentForm extends React.Component {
+    render() {
+        return(
+            <div className='commentForm'>
+                Hello World!!
+            </div>
+            );
+    }
 }
 
 ReactDOM.render(
